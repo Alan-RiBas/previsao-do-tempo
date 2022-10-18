@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  color: #fff;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  background-image: url('../img/ilustracao-diaria-da-nuvem-do-ceu-com-cirros-de-desenhos-animados-e-cumulos-de-nuvens-brancas-em-raios-de-sol_1284-62767.webp');
+}
+.content{
+  width: 80%;
+  padding: 3rem;
+  background-color: #2d2d2d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;  
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.pesquisa{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.pesquisa input{
+  width: 70%;
+  padding: 1rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  color: #2d2d2d;
+}
+.pesquisa button{
+  width: 10%;
+  padding: 1rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  background-color: rgb(67, 165, 221);
+  cursor: pointer;
+}
+.lupa{
+  color: #2d2d2d;
+}
+hr{
+  width: 70%;
+  margin: 1rem 0;
+}
+.display-clima{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.cidade{
+  padding: 1rem;
+}
+.display-clima{
+  width: 80%;
+  border: 1px solid white;
+  border-radius: 0.2rem;
+  background-color: rgba(246, 238, 238,0.2);
+}
+.clima-dia{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.temp{
+  font-weight: 700;
+  font-size: 6rem;
+}
+.status{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clima-status{
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.clima-semana{
+  width: 80%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(246, 238, 238,0.2);
+  border-radius: 0.2rem;
+}
+.arrow-up{
+  color: rgb(243, 86, 38);
+}
+.arrow-down{
+  color: rgb(38, 127, 243);
+}
