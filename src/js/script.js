@@ -1,9 +1,4 @@
-const api= {
-  url: 'https://api.openweathermap.org/data/2.5/',
-  key: 'a8d8cd439a45dbdbf2ea1569594eb2aa',
-  lang: 'pt_br',
-  units: 'metric'
-};
+import {api} from './api';
 
 const inputSearch = document.querySelector('#input-search');
 const btnSearch = document.querySelector('#btn-search');
