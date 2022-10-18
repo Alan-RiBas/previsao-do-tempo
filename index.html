@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./src/css/style.css" />
-  <script src="./src/js/script.js"></script>
+ 
   <script src="https://kit.fontawesome.com/da04aab42a.js" crossorigin="anonymous"></script>
   <title>Clima agora!</title>
 </head>
@@ -13,15 +13,15 @@
   <main class="container">
     <section class="content">
       <div class="pesquisa">
-        <input id="input-search" type="text" placeholder="Digite o nome da cidade">
-        <button id="btn-search" type="button"><i class="fa fa-regular fa-cloud"></i></button>
+        <input class="input-search" type="text" placeholder="Digite o nome da cidade">
+        <button class="btn-search" type="button"><i class="fa fa-regular fa-cloud"></i></button>
       </div>
       <hr>
 
       <div class="display-clima">
         <h1 class="cidade">São Paulo / SP</h1>
         <div class="clima-dia">
-          <h3>14/10</h3>
+          <h3 class="data-atual">14/10</h3>
           <div>
             <h1  class="temp">18°</h1>
           </div>
@@ -83,5 +83,9 @@
       </div>
     </section>
   </main>
+
+  
+  <!-- <script type="module"  src="./src/js/api.js"></script> -->
+  <script type="module"  src="./src/js/script.js"></script>
 </body>
 </html>
