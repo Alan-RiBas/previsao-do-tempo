@@ -46,7 +46,7 @@ const displayResults = (weather)=>{
   tempCurrent.innerHTML = `${parseInt(weather.main.temp)}°`
   statusUmidade.innerHTML = `${weather.main.humidity}%`;
   statusSensacao.innerHTML = `${parseInt(weather.main.feels_like)}°`;
-  statusVento.innerHTML = `${weather.wind.speed}km/h`;
+  statusVento.innerHTML = `${parseInt(weather.wind.speed)}km/h`;
   conteudoBg.style.backgroundImage = `url("${bgImage + weather.name}")`;
 
   conditionTemp.innerText = `Chuva ${weather.weather[0].rain}%`;
