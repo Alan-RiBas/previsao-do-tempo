@@ -6,15 +6,29 @@ const api= {
   lang: 'pt_br',
   units: 'metric'
 };
+const bgImage = "https://source.unsplash.com/1600x900/?";
 const inputSearch = document.querySelector('.input-search');
 const btnSearch = document.querySelector('.btn-search');
 
 //campos selecionados para preencher
+const conteudoBg = document.querySelector('#conteudo');
 const city = document.querySelector('.cidade');
 const currentDate = document.querySelector('.data-atual');
+const tempCurrent = document.querySelector('.temp');
+const statusUmidade = document.querySelector('.umidade');
+const statusSensacao = document.querySelector('.sensacao');
+const statusVento = document.querySelector('.vento');
+
 
 
 //funções
+const dataFormated = ()=>{
+  const data = new Date();
+  let dataFormatada = ((data.getDate() )) + "/" + ((data.getMonth() + 1));
+  return dataFormatada;
+}
+
+
 const apiJson = (city)=>{
    fetch(`${api.url}weather?q=${city}&lang=${api.lang}&units=${api.units}&appid=${api.key}`)
   .then(response => {
@@ -31,13 +45,26 @@ const apiJson = (city)=>{
 //função para inserir informações em tela
 const displayResults = (weather)=>{
   city.innerHTML = `${weather.name}, ${weather.sys.country}`;
-
-  let date = new Date();
-  currentDate.innerHTML = date;
-
-  
-
+  currentDate.innerText = dataFormated();
+  tempCurrent.innerHTML = `${parseInt(weather.main.temp)}°`
+  statusUmidade.innerHTML = `${weather.main.humidity}%`;
+  statusSensacao.innerHTML = `${parseInt(weather.main.feels_like)}°`;
+  statusVento.innerHTML = `${weather.wind.speed}km/h`;
+  conteudoBg.style.backgroundImage = `url("${bgImage + weather.name}")`;
 }
+
+const showCityDefault = () =>{
+  const city = [
+    'Curitiba',
+    'São Paulo',
+    'Rio de Janeiro',
+    'Brasilia'
+  ]
+  city.forEach(city => {
+    apiJson(city);
+  });
+}
+
 
 //eventos
 btnSearch.addEventListener('click', ()=>{
@@ -58,4 +85,3 @@ inputSearch.addEventListener('keypress',(e)=>{
     apiJson(city);
   }
 });
-

@@ -9,9 +9,9 @@
   <script src="https://kit.fontawesome.com/da04aab42a.js" crossorigin="anonymous"></script>
   <title>Clima agora!</title>
 </head>
-<body>
-  <main class="container">
-    <section class="content">
+<body onload="showCityDefault()">
+  <main  class="container">
+    <section id="conteudo" class="content">
       <div class="pesquisa">
         <input class="input-search" type="text" placeholder="Digite o nome da cidade">
         <button class="btn-search" type="button"><i class="fa fa-regular fa-cloud"></i></button>
@@ -28,15 +28,15 @@
           <div class="clima-status">
             <div class="status">
               <h5>Umidade:</h5>
-              <h1>88%</h1>
+              <h1 class="umidade">88%</h1>
             </div>
             <div class="status">
               <h5>Sensação:</h5>
-              <h1>18°</h1>
+              <h1 class="sensacao">18°</h1>
             </div>
             <div class="status">
               <h5>Vento:</h5>
-              <h1>26 Km/h</h1>
+              <h1 class="vento">26 Km/h</h1>
             </div>
           </div>
         </div>
@@ -86,6 +86,6 @@
 
   
   <!-- <script type="module"  src="./src/js/api.js"></script> -->
-  <script type="module"  src="./src/js/script.js"></script>
+  <script type="text/javascript"  src="./src/js/script.js"></script>
 </body>
 </html>
