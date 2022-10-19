@@ -1,11 +1,12 @@
-// import { api } from "./api";
-// const api = require('./api');
-const api= {
-  url: 'https://api.openweathermap.org/data/2.5/',
-  key: 'a8d8cd439a45dbdbf2ea1569594eb2aa',
-  lang: 'pt_br',
-  units: 'metric'
-};
+import { api } from "./api.js";
+
+// const api= {
+//   url: 'https://api.openweathermap.org/data/2.5/',
+//   key: 'a8d8cd439a45dbdbf2ea1569594eb2aa',
+//   lang: 'pt_br',
+//   units: 'metric'
+// };
+
 const bgImage = "https://source.unsplash.com/1600x900/?";
 const inputSearch = document.querySelector('.input-search');
 const btnSearch = document.querySelector('.btn-search');
@@ -18,7 +19,10 @@ const tempCurrent = document.querySelector('.temp');
 const statusUmidade = document.querySelector('.umidade');
 const statusSensacao = document.querySelector('.sensacao');
 const statusVento = document.querySelector('.vento');
-
+const conditionTemp = document.querySelector('.condicao-chuva');
+const conditionDesc = document.querySelector('.descricao');
+const conditionCloud = document.querySelector('.nuvens');
+// const iconDesc = document.querySelector('.img-desc');
 
 
 //funções
@@ -51,6 +55,11 @@ const displayResults = (weather)=>{
   statusSensacao.innerHTML = `${parseInt(weather.main.feels_like)}°`;
   statusVento.innerHTML = `${weather.wind.speed}km/h`;
   conteudoBg.style.backgroundImage = `url("${bgImage + weather.name}")`;
+
+  conditionTemp.innerText = `${weather.weather[0].main}`;
+  conditionDesc.innerText = `${weather.weather[0].description}`;
+  conditionCloud.innerHTML = `Nuvens ${weather.clouds.all}%`
+  // iconDesc.style.backgroundImage = `url(${weather.weather[0].icon})`;
 }
 
 const showCityDefault = () =>{
@@ -72,7 +81,6 @@ btnSearch.addEventListener('click', ()=>{
   const error = 'cidade inválida';
   if(!city && city == '' && city == Number(city)){
     return alert(error);
-
   }else{
     apiJson(city);
   }

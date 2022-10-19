@@ -10,7 +10,8 @@
   <title>Clima agora!</title>
 </head>
 <body onload="showCityDefault()">
-  <main  class="container">
+  <main class="container">
+   
     <section id="conteudo" class="content">
       <div class="pesquisa">
         <input class="input-search" type="text" placeholder="Digite o nome da cidade">
@@ -19,24 +20,24 @@
       <hr>
 
       <div class="display-clima">
-        <h1 class="cidade">São Paulo / SP</h1>
+        <h1 class="cidade"></h1>
         <div class="clima-dia">
-          <h3 class="data-atual">14/10</h3>
+          <h3 class="data-atual"></h3>
           <div>
-            <h1  class="temp">18°</h1>
+            <h1  class="temp"></h1>
           </div>
           <div class="clima-status">
             <div class="status">
               <h5>Umidade:</h5>
-              <h1 class="umidade">88%</h1>
+              <h1 class="umidade"></h1>
             </div>
             <div class="status">
               <h5>Sensação:</h5>
-              <h1 class="sensacao">18°</h1>
+              <h1 class="sensacao"></h1>
             </div>
             <div class="status">
               <h5>Vento:</h5>
-              <h1 class="vento">26 Km/h</h1>
+              <h1 class="vento"></h1>
             </div>
           </div>
         </div>
@@ -45,7 +46,12 @@
       <hr>
 
       <div class="clima-semana">
-        <div class="status">
+
+        <div class="condicao-chuva"></div>
+        <div class="nuvens"></div>
+        <div class="descricao"></div>
+
+        <!-- <div class="status">
           <h1>15/10</h1>
           <div>
             <p class="arrow-up"><i class="fa fa-solid fa-arrow-up arrow-up"></i>22°</p>
@@ -79,13 +85,12 @@
             <p class="arrow-up"><i class="fa fa-solid fa-arrow-up arrow-up"></i>22°</p>
             <p class="arrow-down"><i class="fa fa-solid fa-arrow-down arrow-down"></i>16°</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
   </main>
 
-  
   <!-- <script type="module"  src="./src/js/api.js"></script> -->
-  <script type="text/javascript"  src="./src/js/script.js"></script>
+  <script type="module" src="./src/js/script.js"></script>
 </body>
 </html>
