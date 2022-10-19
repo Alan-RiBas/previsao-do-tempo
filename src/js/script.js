@@ -86,3 +86,5 @@ inputSearch.addEventListener('keypress',(e)=>{
     apiJson(city);
   }
 });
+
+document.body.onload(showCityDefault());
