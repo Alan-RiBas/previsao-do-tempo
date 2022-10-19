@@ -25,7 +25,7 @@ const dataFormated = ()=>{
   return dataFormatada;
 }
 
-
+//Convertendo api recebendo a cidade e disparando a função para exibir as respostas no HTML
 const apiJson = (city)=>{
    fetch(`${api.url}weather?q=${city}&lang=${api.lang}&units=${api.units}&appid=${api.key}`)
   .then(response => {
@@ -55,6 +55,7 @@ const displayResults = (weather)=>{
   // iconDesc.style.backgroundImage = `url(${weather.weather[0].icon})`;
 }
 
+//Função para iniciar com uma cidade
 const showCityDefault = () =>{
   const city = [
     'Curitiba',
@@ -69,6 +70,8 @@ const showCityDefault = () =>{
 
 
 //eventos
+
+//evento de buscar ao apertar o "button" no HTML
 btnSearch.addEventListener('click', ()=>{
   const city = inputSearch.value;
   const error = 'cidade inválida';
@@ -78,7 +81,7 @@ btnSearch.addEventListener('click', ()=>{
     apiJson(city);
   }
 });
-
+//evento de buscar ao escrever e pressionar "enter"
 inputSearch.addEventListener('keypress',(e)=>{
   const tecla = e.keyCode;
   const city = inputSearch.value;
@@ -87,4 +90,5 @@ inputSearch.addEventListener('keypress',(e)=>{
   }
 });
 
+//iniciando o HTML com uma cidade "padrão"
 document.body.onload = showCityDefault();
