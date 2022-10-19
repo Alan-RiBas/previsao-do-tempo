@@ -49,7 +49,7 @@ const displayResults = (weather)=>{
   statusVento.innerHTML = `${weather.wind.speed}km/h`;
   conteudoBg.style.backgroundImage = `url("${bgImage + weather.name}")`;
 
-  conditionTemp.innerText = `${weather.weather[0].main}`;
+  conditionTemp.innerText = `Chuva ${weather.weather[0].rain}%`;
   conditionDesc.innerText = `${weather.weather[0].description}`;
   conditionCloud.innerHTML = `Nuvens ${weather.clouds.all}%`
   // iconDesc.style.backgroundImage = `url(${weather.weather[0].icon})`;
@@ -87,4 +87,4 @@ inputSearch.addEventListener('keypress',(e)=>{
   }
 });
 
-document.body.onload(showCityDefault());
+document.body.onload = showCityDefault();
