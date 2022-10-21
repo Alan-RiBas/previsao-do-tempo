@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./src/css/style.css" />
- 
-  <script src="https://kit.fontawesome.com/da04aab42a.js" crossorigin="anonymous"></script>
-  <title>Clima agora!</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    
+    <title>Clima agora!</title>
+  </head>
+  <body>
   <main class="container">
-   
+    
     <section id="conteudo" class="content">
       <div class="pesquisa">
         <input class="input-search" type="text" placeholder="Digite o nome da cidade">
-        <button class="btn-search" type="button"><i class="fa fa-regular fa-cloud"></i></button>
+        <button class="btn-search" type="button"></button>
       </div>
       <hr>
-
+      
       <div class="display-clima">
-        <h1 class="cidade"></h1>
-        <div class="clima-dia">
+        
+        <div class="clima">
+          <h1 class="cidade"></h1>
           <h3 class="data-atual"></h3>
-          <div>
-            <h1  class="temp"></h1>
-          </div>
-          <div class="clima-status">
+          <h1  class="temp"></h1>
+        </div>
+        
+        <div class="clima-dia">
+          <div class="clima-desc">
             <div class="status">
               <h5>Umidade:</h5>
               <h1 class="umidade"></h1>
@@ -42,55 +43,25 @@
           </div>
         </div>
       </div>
-
+      
       <hr>
-
-      <div class="clima-semana">
-
-        <div class="condicao-chuva"></div>
-        <div class="nuvens"></div>
-        <div class="descricao"></div>
-
-        <!-- <div class="status">
-          <h1>15/10</h1>
-          <div>
-            <p class="arrow-up"><i class="fa fa-solid fa-arrow-up arrow-up"></i>22°</p>
-            <p class="arrow-down"><i class="fa fa-solid fa-arrow-down arrow-down"></i>16°</p>
+      
+      <div class="clima-status">
+        
+        <!-- <div class="condicao-chuva"></div> -->
+        <div class="cond-template">
+          <div class="cond-nuvens">
+            <i class="fa fa-regular fa-cloud"></i></i>
+            <div class="nuvens"></div>
           </div>
+          <div class="descricao"></div>
         </div>
-        <div class="status">
-          <h1>15/10</h1>
-          <div>
-            <p class="arrow-up"><i class="fa fa-solid fa-arrow-up arrow-up"></i>22°</p>
-            <p class="arrow-down"><i class="fa fa-solid fa-arrow-down arrow-down"></i>16°</p>
-          </div>
-        </div>
-        <div class="status">
-          <h1>15/10</h1>
-          <div>
-            <p class="arrow-up"><i class="fa fa-solid fa-arrow-up arrow-up"></i>22°</p>
-            <p class="arrow-down"><i class="fa fa-solid fa-arrow-down arrow-down"></i>16°</p>
-          </div>
-        </div>
-        <div class="status">
-          <h1>15/10</h1>
-          <div>
-            <p class="arrow-up"><i class="fa fa-solid fa-arrow-up arrow-up"></i>22°</p>
-            <p class="arrow-down"><i class="fa fa-solid fa-arrow-down arrow-down"></i>16°</p>
-          </div>
-        </div>
-        <div class="status">
-          <h1>15/10</h1>
-          <div>
-            <p class="arrow-up"><i class="fa fa-solid fa-arrow-up arrow-up"></i>22°</p>
-            <p class="arrow-down"><i class="fa fa-solid fa-arrow-down arrow-down"></i>16°</p>
-          </div>
-        </div> -->
       </div>
     </section>
   </main>
-
+  
   <!-- <script type="module"  src="./src/js/api.js"></script> -->
   <script type="module" src="./src/js/script.js"></script>
+  <script src="https://kit.fontawesome.com/da04aab42a.js" crossorigin="anonymous"></script>
 </body>
 </html>
